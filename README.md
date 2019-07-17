@@ -1,3 +1,3 @@
-# stacker2
+# scrapbox2
 
 https://scrapbox.io/stacker2/
