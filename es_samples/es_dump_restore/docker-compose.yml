@@ -1,0 +1,13 @@
+version: "3"
+services:
+  es:
+    build: .
+    image: snapshot-elasitcsearch:1.0
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      - "discovery.type=single-node"
+      - "path.repo=/var/lib/elasticsearch/snapshots"
+    volumes:
+      - ./sp_backup:/var/lib/elasticsearch/snapshots
