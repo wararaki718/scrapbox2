@@ -1,0 +1,16 @@
+version: "3"
+services:
+  page:
+    build: ./page
+    image: sample-nginx:1.0
+    volumes:
+      - html-page:/usr/share/nginx/html
+  nginx:
+    image: nginx:1.17.1
+    volumes:
+      - html-page:/usr/share/nginx/html
+    ports:
+      - 80:80
+
+volumes:
+  html-page:
