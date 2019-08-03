@@ -1,0 +1,22 @@
+version: "3"
+services:
+  es:
+    build: ./es
+    image: es-plugins:1.0
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment: 
+      - discovery.type=single-node
+    networks:
+      - es-net
+  app:
+    build: ./app
+    image: es-health-check:1.0
+    depends_on:
+      - es
+    networks:
+      - es-net
+
+networks:
+  es-net:
