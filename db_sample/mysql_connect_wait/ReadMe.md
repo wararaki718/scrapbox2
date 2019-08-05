@@ -6,14 +6,15 @@
 brew install mysql
 ```
 
-## start a db server
+## build image
+
+```
+docker-compose build
+```
+
+## run
 
 ```
 docker-compose up
 ```
 
-## connect to db
-
-```
-mysql --host 127.0.0.1 --port 3306 --user user -ppassword
-```
