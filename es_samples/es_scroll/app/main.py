@@ -37,6 +37,7 @@ def main():
             scroll_id=scroll_id,
             scroll='2m'
         )
+        scroll_id = response.get('_scroll_id')
         data.extend(response.get('hits').get('hits'))
 
         ## show info
