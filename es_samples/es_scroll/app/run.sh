@@ -24,7 +24,7 @@ curl -H 'Content-Type: application/x-ndjson' -XPOST ${ES_HOST}/bank/account/_bul
 rm accounts.json accounts.zip
 echo 'set data for elasticsearch'
 
-
+## test scroll
 python main.py
 
 echo 'DONE'
