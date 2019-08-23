@@ -1,0 +1,23 @@
+version: "3"
+services:
+  es:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.5.1
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      - discovery.type=single-node
+    networks:
+      - esnet
+  app:
+    build: ./app
+    image: es-scroll:1.0
+    environment:
+      - ES_HOST=http://es:9200
+    depends_on:
+      - es
+    networks:
+      - esnet
+
+networks:
+  esnet:
