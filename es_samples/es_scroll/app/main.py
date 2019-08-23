@@ -42,7 +42,6 @@ def main():
         ## show info
         print(f'size of data: {len(data)}')
         print(json.dumps(data[-1]))
-
     print('finish scroll!')
 
     return 0
