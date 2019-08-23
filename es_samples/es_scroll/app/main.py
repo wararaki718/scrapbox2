@@ -17,7 +17,7 @@ def create_es_query() -> dict:
 
 def main():
     es_host = os.getenv('ES_HOST')
-    es_index = 'bank'
+    es_index = os.getenv('ES_INDEX')
     es_query = create_es_query()
 
     es = Elasticsearch(hosts=[es_host])
