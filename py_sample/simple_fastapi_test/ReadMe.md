@@ -1,5 +1,13 @@
 # run test
 
+## build image
+
+```shell
+docker-compose build
 ```
-pytest
+
+## run program
+
+```shell
+docker-compose up
 ```
