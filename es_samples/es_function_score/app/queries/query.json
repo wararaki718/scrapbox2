@@ -1,0 +1,14 @@
+{
+    "query": {
+        "match_phrase": {
+            "state": "AK"
+        }
+    },
+    "_source": [
+        "account_number",
+        "firstname",
+        "lastname",
+        "age",
+        "state"
+    ]
+}

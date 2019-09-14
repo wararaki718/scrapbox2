@@ -1,0 +1,25 @@
+{
+    "query": {
+        "function_score": {
+            "query": {
+                "match_phrase": {
+                    "state": "AK"
+                }
+            },
+            "functions": [
+                {
+                    "filter": {"range": {"age": {"gte": 20, "lte": 29}}},
+                    "weight": 2
+                }
+            ],
+            "boost_mode": "multiply"
+        }
+    },
+    "_source": [
+        "account_number",
+        "firstname",
+        "lastname",
+        "age",
+        "state"
+    ]
+}
