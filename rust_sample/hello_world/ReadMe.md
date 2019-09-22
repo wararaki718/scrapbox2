@@ -3,7 +3,7 @@
 ## compile
 
 ```shell
-rustc hello
+rustc hello.rs
 ```
 
 ## run
