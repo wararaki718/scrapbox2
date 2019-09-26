@@ -17,6 +17,8 @@ comma_corpus = [
     'Is,this,the,first,document?'
 ]
 
+
+## analyzers
 def space_analyzer(text):
     return text.split()
 
@@ -25,6 +27,8 @@ def comma_analyzer(text):
     return text.split(',')
 
 
+
+## check behavior
 def check(vectorizer):
     print('space text:')
     print(vectorizer.transform([corpus[0]]))
