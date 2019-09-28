@@ -4,6 +4,7 @@ WORKDIR /build
 COPY Sample.java /build
 RUN javac Sample.java
 
+
 FROM python:3.7
 
 # install java & setup environment
