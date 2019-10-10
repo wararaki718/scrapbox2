@@ -14,3 +14,7 @@ insert data for es
 ```shell
 docker-compose up
 ```
+
+## run
+
+open intellij and run command.
