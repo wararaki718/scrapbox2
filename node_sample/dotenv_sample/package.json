@@ -1,0 +1,9 @@
+{
+  "name": "dotenv_sample",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
