@@ -8,7 +8,7 @@ class App extends React.Component {
       value: '',
       username: '',
       location: '',
-      create_at: ''
+      created_at: ''
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -23,7 +23,7 @@ class App extends React.Component {
           value: String(Date.now()),
           username: jsonData.login,
           location: jsonData.location,
-          create_at: jsonData.create_at
+          created_at: jsonData.created_at
         })
       });
   }
@@ -47,7 +47,7 @@ class App extends React.Component {
           Location: {this.state.location}
         </div>
         <div>
-          CreateAt: {this.state.create_at}
+          CreatedAt: {this.state.created_at}
         </div>
       </div>
     );
