@@ -1,9 +1,9 @@
-# sample nextjs application
+# sample react next app
 
 ```shell
-yarn build
+docker-compose build
 ```
 
 ```shell
-yarn start
+docker-compose up
 ```
