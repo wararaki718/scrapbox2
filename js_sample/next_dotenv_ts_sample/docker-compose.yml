@@ -1,0 +1,9 @@
+version: "3"
+services:
+  app:
+    build: .
+    image: sample-dotenv-next:1.0
+    environment:
+      - DOTENV_FILE=.env.prd
+    ports:
+      - 3000:3000
