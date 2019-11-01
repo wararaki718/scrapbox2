@@ -1,0 +1,7 @@
+version: "3"
+services:
+  app:
+    build: .
+    image: sample-react-serve:1.0
+    ports:
+      - 80:80
