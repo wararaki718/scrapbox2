@@ -4,8 +4,7 @@ REPOSITORY_NAME=my_backup_repository
 SNAPSHOT_NAME=my_snapshot
 INDEX_NAME=shakespeare
 
-# delete existed index.
-curl -XDELETE "localhost:9200/${INDEX_NAME}?pretty"
+# check existed index.
 curl -XGET "localhost:9200/_cat/indices?v&pretty"
 
 # restore snapshot
