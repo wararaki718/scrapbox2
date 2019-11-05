@@ -1,0 +1,12 @@
+version: "3"
+services:
+  es:
+    build: .
+    image: snapshot-es-check:1.0
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      - "discovery.type=single-node"
+    volumes:
+      - ./sp_backup:/usr/share/elasticsearch/snapshots
