@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  app:
+    build:
+      context: .
+      args:
+        - BUILDENV=development
+    image: sample-env-nextjs:1.0
+    ports:
+      - 3000:3000
+    
