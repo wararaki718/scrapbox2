@@ -16,3 +16,7 @@ mkdir data
 cd data
 wget https://raw.githubusercontent.com/apache/spark/master/data/mllib/sample_libsvm_data.txt
 ```
+
+### run
+
+using intellij. open sample_spark_app directory.
