@@ -3,7 +3,7 @@ kaggle datasets download -d abcsds/pokemon
 unzip pokemon.zip
 rm pokemon.zip
 
-mkdir -p sample_pipeline_app/data
-mv Pokemon.csv sample_pipeline_app/data
+mkdir -p data
+mv Pokemon.csv data
 
 echo "download completed!"
