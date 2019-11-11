@@ -1,4 +1,4 @@
-# insert data to MySQL DB
+# create table in MySQL DB
 
 ## setup environment
 
