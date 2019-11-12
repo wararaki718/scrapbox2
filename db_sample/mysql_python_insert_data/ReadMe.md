@@ -37,7 +37,7 @@ bash download.sh
 docker-compose up
 ```
 
-## insert to db
+## insert data to db
 
 ```shell
 python insert_data.py
