@@ -49,6 +49,46 @@ def delete_table(connection: mysql.connector.MySQLConnection,
     cursor.close()
 
 
+def insert_data(connection: mysql.connector.MySQLConnection,
+                table_name: str,
+                data: dict):
+    cursor = connection.cursor()
+    query = f"""
+        INSERT INTO {table_name} (id, name) VALUES (%(id)s, %(name)s)
+    """
+    cursor.execute(query, data)
+    
+    # commit
+    connection.commit()
+    cursor.close()
+
+
+def insert_bulk_data(connection: mysql.connector.MySQLConnection,
+                     table_name: str,
+                     data: list):
+    cursor = connection.cursor()
+    query = f"""
+        INSERT INTO {table_name} (id, name) VALUES (%(id)s, %(name)s)
+    """
+    cursor.executemany(query, data)
+    
+    # commit
+    connection.commit()
+    cursor.close()
+
+
+def show_data(connection: mysql.connector.MySQLConnection,
+              table_name: str):
+    cursor = connection.cursor()
+    query = f"""
+        SELECT * FROM {table_name}
+    """
+    cursor.execute(query)
+    for row in cursor:
+        print(row)
+    cursor.close()
+
+
 def show_tables(connection: mysql.connector.MySQLConnection):
     cursor = connection.cursor()
     query = f"""
@@ -61,7 +101,7 @@ def show_tables(connection: mysql.connector.MySQLConnection):
 
 def main():
     logger = init_logger()
-    df = pd.read_csv('data/Pokemon.csv')
+    df = pd.read_csv('data/Pokemon.csv').rename(columns={'#': 'Id'}).drop_duplicates('Id')
     logger.info(df.shape)
     logger.info(df.columns)
 
@@ -73,6 +113,16 @@ def main():
     logger.info('create table.')
     create_table(connection, table_name)
     show_tables(connection)
+
+    logger.info('insert data')
+    insert_data(connection, table_name, {'id': 0, 'name': 'test'})
+
+    logger.info('bulk insert')
+    data = []
+    for row in df.head(20).itertuples():
+        data.append({'id': row.Id, 'name': row.Name})
+    insert_bulk_data(connection, table_name, data)
+    show_data(connection, table_name)
 
     logger.info('delete table.')
     delete_table(connection, table_name)
