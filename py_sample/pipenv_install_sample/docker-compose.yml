@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  dev:
+    build:
+      context: .
+      args:
+        - BUILD_OPTION=--dev
+    image: show-pipenv-pkg-dev:1.0
+  prd:
+    build: .
+    image: show-pipenv-pkg-prd:1.0
+  sys:
+    build:
+      context: .
+      args:
+        - BUILD_OPTION=--system
+    image: show-pipenv-pkg-sys:1.0
