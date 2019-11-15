@@ -1,5 +1,6 @@
 import os
 
+
 def main():
     print(os.listdir('.'))
     print('copy text.txt to text2.txt.')
@@ -21,6 +22,7 @@ def main():
     print('text2.txt was deleted.')
     print(os.listdir('.'))
     print('DONE')
+
 
 if __name__ == '__main__':
     main()
