@@ -30,7 +30,7 @@ pipenv install mysqlclient SQLAlchemy
 docker-compose up
 ```
 
-## run a sample program
+## execute a sample program
 
 ```shell
 pipenv run python sample_connection.py
