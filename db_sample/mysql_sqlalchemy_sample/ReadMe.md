@@ -5,6 +5,11 @@
 set environment variables, because these variables are needed to install mysqlclient.
 
 ```shell
+brew install openssl
+```
+
+
+```shell
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
