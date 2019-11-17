@@ -1,4 +1,4 @@
-# Learning-to-rank by lightGBM on Python
+# Learning-to-rank by lightGBM on Apache Spark
 
 ## download dataset
 
@@ -6,18 +6,10 @@
 bash download.sh
 ```
 
-## setup environment
-
-lightgbm
+## install packages
 
 ```shell
-PIP_NO_CACHE_DIR=off PIP_NO_BINARY="lightgbm" pipenv install lightgbm
-```
-
-other libraries.
-
-```shell
-pipenv install scikit-learn scipy pandas
+pipenv install lightgbm scipy scikit-learn pandas
 ```
 
 ## run
