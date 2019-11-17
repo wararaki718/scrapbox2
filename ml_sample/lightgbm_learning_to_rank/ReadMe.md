@@ -14,6 +14,8 @@ lightgbm
 PIP_NO_CACHE_DIR=off PIP_NO_BINARY="lightgbm" pipenv install lightgbm
 ```
 
+other libraries.
+
 ```shell
 pipenv install scikit-learn scipy pandas
 ```
