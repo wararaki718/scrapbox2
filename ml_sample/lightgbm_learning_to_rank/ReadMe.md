@@ -1,4 +1,4 @@
-# Learning-to-rank by lightGBM on Apache Spark
+# Learning-to-rank by lightGBM on Python
 
 ## download dataset
 
