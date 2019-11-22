@@ -1,4 +1,4 @@
-# sample sqlalchemy migration
+# sample sqlalchemy bulk insert
 
 ## setup environment
 
