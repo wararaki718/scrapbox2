@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "sample_ensemble_nlp"
+version = "0.1.0"
+description = ""
+authors = ["wararaki"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+scikit-learn = "^0.21.3"
+kaggle = "^1.5"
+pandas = "^0.25.3"
+keras = "^2.3"
+tensorflow = "=1.14.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
