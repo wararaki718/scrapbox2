@@ -1,5 +1,7 @@
 # sample ensemble code
 
+## setup environment
+
 ```shell
 poetry new sample_ensemble_nlp
 ```
