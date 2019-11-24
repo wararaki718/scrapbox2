@@ -13,3 +13,9 @@ poetry add scikit-learn kaggle keras pandas tensorflow==1.14.0
 ```shell
 bash download.sh
 ```
+
+## run a script
+
+```shell
+poetry run python sample_ensemble_nlp/main.py
+```
