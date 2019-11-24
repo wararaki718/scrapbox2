@@ -91,6 +91,11 @@ def main():
     )
     print(f'rfc score: {score}')
 
+    # to implement ensemble
+    # sort probas by class_
+    # rfc_probas = rfc.predict_proba(tfidf_vect.transform(X_test))
+    # mlp_probas = mlp_model.predict_proba(tfidf_vect.transform(X_test))
+
 
 if __name__ == '__main__':
     main()
