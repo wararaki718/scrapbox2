@@ -1,0 +1,50 @@
+version: "3.7"
+services:
+  elasticsearch:
+    image: elasticsearch:7.4.2
+    container_name: sample-elasticsearch
+    ports:
+      - 9200:9200
+      - 9300:9300
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - xpack.graph.enabled=false
+      - xpack.ml.enabled=false
+      - xpack.monitoring.enabled=false
+      - xpack.security.enabled=false
+      - xpack.watcher.enabled=false
+    networks:
+      - esnet
+  kibana:
+    image: kibana:7.4.2
+    container_name: sample-kibana
+    ports:
+      - 5601:5601
+    networks:
+      - esnet
+    depends_on:
+      - elasticsearch
+  cerebro:
+    image: lmenezes/cerebro:0.8.3
+    container_name: sample-cerebro
+    ports:
+      - 9000:9000
+    networks:
+      - esnet
+    depends_on:
+      - elasticsearch
+  script:
+    build: ./scripts
+    image: setup-bank-script:1.0
+    container_name: sample-script
+    networks:
+      - esnet
+    depends_on:
+      - elasticsearch
+    environment:
+      - ES_HOST=elasticsearch
+      - ES_PORT=9200
+
+networks:
+  esnet:
