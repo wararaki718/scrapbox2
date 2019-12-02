@@ -14,8 +14,22 @@ or
 gpp merge_sort.cpp
 ```
 
-## run
+## run & calc time
 
 ```shell
-./a.out
+time ./a.out
+```
+
+## result
+
+insert sort
+
+```shell
+0.00s user 0.01s system 50% cpu 0.015 total
+```
+
+merge sort
+
+```shell
+0.00s user 0.00s system 69% cpu 0.004 total
 ```
