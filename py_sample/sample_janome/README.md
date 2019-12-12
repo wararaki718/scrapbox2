@@ -6,12 +6,6 @@
 poetry install
 ```
 
-install kuromoji
-
-```shell
-pip
-```
-
 ## run program
 
 ```shell
