@@ -2,7 +2,7 @@
 
 ## environment settings
 
-set mount path
+you set the mount path. (use absolute path!!!)
 
 ```spark-cluster.yaml
       volumes:
