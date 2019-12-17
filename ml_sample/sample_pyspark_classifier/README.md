@@ -1,5 +1,4 @@
-# load data
-
+# pyspark classifier with standalone spark clusters
 ## launch spark clusters
 
 ```shell
