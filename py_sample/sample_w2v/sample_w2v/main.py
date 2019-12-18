@@ -34,7 +34,7 @@ class TextDataset:
         return text
 
     def __iter__(self) -> List[str]:
-        for filepath in glob(self._dir_path):
+        for filepath in sorted(glob(self._dir_path)):
             text = self._load_text(filepath)
             yield self._tokenizer(text)
 
