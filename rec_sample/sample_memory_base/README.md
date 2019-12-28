@@ -1,10 +1,4 @@
-# memory base recommendation
-
-## download data
-
-```shell
-bash download.sh
-```
+# memory base user recommendation
 
 ## setup environments
 
