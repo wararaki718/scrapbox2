@@ -4,7 +4,6 @@ from recommender.memory_base_user_recommender import MemoryBaseUserRecommender
 
 
 def main():
-    df = pd.DataFrame([[1, 3, 0, 3], [0, 1, 3, 0], [2, 1, 3, 1], [1, 3, 2, 0]])
     df = pd.DataFrame([
         {'user_id': 1, 'item_id': 1, 'rate': 1},
         {'user_id': 1, 'item_id': 2, 'rate': 3},
@@ -20,7 +19,7 @@ def main():
         {'user_id': 4, 'item_id': 3, 'rate': 2}
     ])
     print(df)
-    print()
+    print(df.shape)
 
     model = MemoryBaseUserRecommender()
     model.fit(df)

@@ -1,11 +1,5 @@
 # improved sample memory base
 
-## download data
-
-```shell
-bash download.sh
-```
-
 ## setup environments
 
 ```shell
