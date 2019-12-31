@@ -6,6 +6,12 @@
 brew install protobuf
 ```
 
+## setup environment
+
+```shell
+go get -u github.com/golang/protobuf/protoc-gen-go
+```
+
 ## generate grpc codes
 
 ```shell
