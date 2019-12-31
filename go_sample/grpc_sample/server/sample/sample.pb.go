@@ -4,8 +4,12 @@
 package sample
 
 import (
+	context "context"
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
+	grpc "google.golang.org/grpc"
+	codes "google.golang.org/grpc/codes"
+	status "google.golang.org/grpc/status"
 	math "math"
 )
 
@@ -116,4 +120,84 @@ var fileDescriptor_2141552de9bf11d0 = []byte{
 	0x13, 0xc2, 0x77, 0x2c, 0xc8, 0x14, 0xe2, 0xd3, 0x43, 0xb1, 0x4c, 0x8a, 0x5f, 0x0f, 0xd5, 0x5c,
 	0x25, 0x86, 0x24, 0x36, 0xb0, 0xbb, 0x8c, 0x01, 0x01, 0x00, 0x00, 0xff, 0xff, 0x94, 0xfa, 0x85,
 	0x46, 0xa7, 0x00, 0x00, 0x00,
+}
+
+// Reference imports to suppress errors if they are not otherwise used.
+var _ context.Context
+var _ grpc.ClientConn
+
+// This is a compile-time assertion to ensure that this generated file
+// is compatible with the grpc package it is being compiled against.
+const _ = grpc.SupportPackageIsVersion4
+
+// SampleServerClient is the client API for SampleServer service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type SampleServerClient interface {
+	SampleApi(ctx context.Context, in *SampleRequest, opts ...grpc.CallOption) (*SampleResponse, error)
+}
+
+type sampleServerClient struct {
+	cc *grpc.ClientConn
+}
+
+func NewSampleServerClient(cc *grpc.ClientConn) SampleServerClient {
+	return &sampleServerClient{cc}
+}
+
+func (c *sampleServerClient) SampleApi(ctx context.Context, in *SampleRequest, opts ...grpc.CallOption) (*SampleResponse, error) {
+	out := new(SampleResponse)
+	err := c.cc.Invoke(ctx, "/SampleServer/SampleApi", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// SampleServerServer is the server API for SampleServer service.
+type SampleServerServer interface {
+	SampleApi(context.Context, *SampleRequest) (*SampleResponse, error)
+}
+
+// UnimplementedSampleServerServer can be embedded to have forward compatible implementations.
+type UnimplementedSampleServerServer struct {
+}
+
+func (*UnimplementedSampleServerServer) SampleApi(ctx context.Context, req *SampleRequest) (*SampleResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SampleApi not implemented")
+}
+
+func RegisterSampleServerServer(s *grpc.Server, srv SampleServerServer) {
+	s.RegisterService(&_SampleServer_serviceDesc, srv)
+}
+
+func _SampleServer_SampleApi_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SampleRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(SampleServerServer).SampleApi(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/SampleServer/SampleApi",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(SampleServerServer).SampleApi(ctx, req.(*SampleRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _SampleServer_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "SampleServer",
+	HandlerType: (*SampleServerServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "SampleApi",
+			Handler:    _SampleServer_SampleApi_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "sample.proto",
 }
