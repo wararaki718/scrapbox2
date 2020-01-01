@@ -44,7 +44,7 @@ cd server
 docker-compose up
 ```
 
-client
+after running the server, you execute the client.
 
 ```shell
 cd client

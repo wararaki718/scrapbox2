@@ -13,11 +13,11 @@ class Server(sample_pb2_grpc.SampleServerServicer):
 
 
 def serve():
+    print('start server')
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     sample_pb2_grpc.add_SampleServerServicer_to_server(Server(), server)
     server.add_insecure_port('[::]:9000')
-    
-    print('start server')
+
     server.start()
     server.wait_for_termination()
 

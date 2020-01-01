@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	fmt.Println("client")
+	fmt.Println("start client")
 
 	conn, err := grpc.Dial("localhost:9000", grpc.WithInsecure(), grpc.WithBlock())
 	if err != nil {
