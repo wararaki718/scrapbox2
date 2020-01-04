@@ -46,11 +46,12 @@ class MemoryBaseRecommender(BaseRecommender):
             for user_id in self.user_id2idx.keys()
         ])
 
+        # scoring
         scores = similarities.dot((ratings - r_mean_items).T) / np.array(np.abs(similarities).sum(axis=1))
         self.r = sparse.csr_matrix(user_mean_evals + scores)
 
-        # todo: improve
-        self.r = self.r.multiply(ratings < 1.0)
+        # remove evaluated items
+        self.r = self.r.multiply((self.r > 0) - (ratings > 0))
 
         return self
         
