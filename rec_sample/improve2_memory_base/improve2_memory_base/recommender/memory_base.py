@@ -49,7 +49,7 @@ class MemoryBaseRecommender(BaseRecommender):
 
         # scoring
         scores = similarities.dot((ratings - r_mean_items).T) / np.array(np.abs(similarities).sum(axis=1))
-        self.r = sparse.csr_matrix(user_mean_evals + scores)
+        self.r = sparse.csr_matrix(user_mean_evals + scores) # todo: improve dense
 
         # remove evaluated items
         self.r = self.r.multiply((self.r > 0) - (ratings > 0))
