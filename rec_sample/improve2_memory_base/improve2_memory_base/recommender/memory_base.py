@@ -22,13 +22,14 @@ class MemoryBaseRecommender(BaseRecommender):
         self.item_id2idx = {item_id: index for index, item_id in enumerate(df[self.item_col].unique())}
         self.item_idx2id = {index: item_id for item_id, index in self.item_id2idx.items()}
         
-        # cosine sims
         row = [self.user_id2idx[user_id] for user_id in df[self.user_col]]
         col = [self.item_id2idx[item_id] for item_id in df[self.item_col]]
         ratings = sparse.coo_matrix((df[self.rate_col], (row, col)))
         ratings = ratings.tocsr()
+
+        # calc similarity (cosine_sims)
         similarities = cosine_similarity(ratings, dense_output=False)
-        similarities.setdiag(0.0)
+        similarities.setdiag(0.0) # remove own similarites
         similarities.eliminate_zeros()
 
         # each item's mean evaluation
