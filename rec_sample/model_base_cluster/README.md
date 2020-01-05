@@ -15,5 +15,5 @@ poetry install
 ## run
 
 ```shell
-poetry run python model_base_cluster/main.py 
+poetry run python model_base_cluster/main.py
 ```
