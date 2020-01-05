@@ -16,7 +16,7 @@ class MemoryBaseRecommender(BaseRecommender):
         self.rate_col = rate_col
 
 
-    def fit(self, df: pd.DataFrame):
+    def fit(self, df: pd.DataFrame, remove_elauated_items: bool=True):
         # set values
         self.user_id2idx = {user_id: index for index, user_id in enumerate(df[self.user_col].unique())}
         self.item_id2idx = {item_id: index for index, item_id in enumerate(df[self.item_col].unique())}
@@ -52,7 +52,9 @@ class MemoryBaseRecommender(BaseRecommender):
         self.r = sparse.csr_matrix(user_mean_evals + scores) # todo: improve dense
 
         # remove evaluated items
-        self.r = self.r.multiply((self.r > 0) - (ratings > 0))
+        if remove_elauated_items:
+            self.r = self.r.multiply((self.r > 0) - (ratings > 0))
+            self.r.eliminate_zeros()
 
         return self
         
