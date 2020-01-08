@@ -1,4 +1,4 @@
-# calc eigenvalue
+# sample eigenvalue
 
 ## setup libs
 
