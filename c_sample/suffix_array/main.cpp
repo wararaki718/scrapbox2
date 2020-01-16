@@ -6,6 +6,7 @@
 
 using namespace std;
 
+
 struct suffix_string {
     string s;
     int index;
@@ -52,14 +53,12 @@ int main()
 
     vector<suffix_string> suffix_array;
     for(int i = 0; i < s.size(); i++) {
-        suffix_string ss;
-        ss.s = s.substr(i);
-        ss.index = i;
-        suffix_array.push_back(ss);
+        suffix_array.push_back({s.substr(i), i});
     }
     sort(suffix_array.begin(), suffix_array.end(), compLess);
     show_suffix_array(suffix_array);
 
+    // search
     int index = get_substring_index(pattern, suffix_array);
     cout << "pattern {" << pattern << "}, target {" << s << "}, index {" << index << "}" << endl;
 
