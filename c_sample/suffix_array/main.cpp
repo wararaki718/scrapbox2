@@ -29,19 +29,26 @@ void show_suffix_array(vector<suffix_string> suffix_array)
 }
 
 
-int get_substring_index(string pattern, vector<suffix_string> suffix_array)
+int binary_search(string pattern, vector<suffix_string> suffix_array)
 {
-    for(auto it = suffix_array.begin(); it != suffix_array.end(); it++) {
-        string suffix_str = (*it).s;
-        if(suffix_str.size() < pattern.size()) {
-            continue;
+    int low = 0;
+    int high = suffix_array.size() - 1;
+    while (low <= high) {
+        int mid = (high + low)/2;
+        suffix_string suffix_item = suffix_array[mid];
+
+        if(suffix_item.s.size() >= pattern.size() &&
+           suffix_item.s.substr(0, pattern.size()) == pattern) {
+            return suffix_item.index;
         }
 
-        if(suffix_str.substr(0, pattern.size()) == pattern) {
-            return (*it).index;
+        if(suffix_item.s > pattern) {
+            high = mid - 1;
+        } else {
+            low = mid + 1;
         }
     }
-    // do not find
+    // not find
     return -1;
 }
 
@@ -59,7 +66,7 @@ int main()
     show_suffix_array(suffix_array);
 
     // search
-    int index = get_substring_index(pattern, suffix_array);
+    int index = binary_search(pattern, suffix_array);
     cout << "pattern {" << pattern << "}, target {" << s << "}, index {" << index << "}" << endl;
 
     return 0;
