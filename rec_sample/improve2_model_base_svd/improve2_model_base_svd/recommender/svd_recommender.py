@@ -27,7 +27,9 @@ class SVDRecommender(BaseRecommender):
         row = [self.user_id2idx[user_id] for user_id in df[self.user_col]]
         col = [item_id2idx[item_id] for item_id in df[self.item_col]]
         ratings = sparse.coo_matrix((df[self.rate_col], (row, col))).tocsr()
-        user_rating_means = ratings.mean(axis=1)
+        
+        # calc mean (use nonzero elements)
+        user_rating_means = ratings.sum(axis=1) / ratings.getnnz(axis=1).reshape(-1, 1)
         del row
         del col
         gc.collect()
