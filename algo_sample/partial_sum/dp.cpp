@@ -1,13 +1,11 @@
 #include <iostream>
 #include <algorithm>
+#include <cstring>
 
 #define MAX_N 100
 #define MAX_A 10000
 
 using namespace std;
-
-
-
 
 
 int main()
@@ -21,6 +19,7 @@ int main()
     }
 
     bool dp[MAX_N+1][MAX_A+1];
+    memset(dp, false, sizeof(dp));
     dp[0][0] = true;
 
     for(int i = 0; i < n; i++) {
