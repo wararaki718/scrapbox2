@@ -1,4 +1,4 @@
-# sample multi-processing
+# sample multi-processing shared memory
 
 ## run program
 
