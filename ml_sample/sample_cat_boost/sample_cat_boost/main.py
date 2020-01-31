@@ -24,7 +24,7 @@ def main():
         eval_set=(X_test, y_test)
     )
     y_preds = model.predict(X_test)
-    print(accuracy_score(y_test, y_preds))
+    print(f'accuracy: {accuracy_score(y_test, y_preds)}')
 
     return 0
 
