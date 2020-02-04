@@ -3,7 +3,7 @@
 ## setup environment
 
 ```shell
-bash download.sh
+poetry install
 ```
 
 ## run
