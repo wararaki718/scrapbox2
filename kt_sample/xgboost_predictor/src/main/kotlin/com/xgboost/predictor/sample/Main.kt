@@ -1,4 +1,4 @@
-package com.xgboost.predicter.sample
+package com.xgboost.predictor.sample
 
 import biz.k11i.xgboost.Predictor
 import biz.k11i.xgboost.util.FVec
