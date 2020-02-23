@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello WebSocket</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/main.css" rel="stylesheet">
+</head>
+<body>
+<div id="main-content" class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input id="username" class="form-control" placeholder="Your name is here...">
+                </div>
+                <button id="connect" class="btn btn-default" type="submit">Connect</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <ul id="userlist"></ul>
+        </div>
+        <div class="col-md-12">
+            <div id="conversation" style="display: none;">
+                <div>Chat messages</div>
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="message">Your message</label>
+                        <input type="text" id="message" class="form-control" placeholder="Your message is here..." />
+                    </div>
+                    <button id="send" class="btn btn-default" type="submit">Send</button>
+                </form>
+                <ul id="messages"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/app.js"></script>
+</div>
+</body>
+</html>
