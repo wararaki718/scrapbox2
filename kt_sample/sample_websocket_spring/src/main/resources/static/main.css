@@ -1,0 +1,24 @@
+#main-content {
+    padding-top: 20px;
+}
+
+#message-form {
+    margin-top: 20px;
+}
+
+#content {
+    resize: none;
+}
+
+.custom-resize {
+    height: 64px;
+    width: auto;
+}
+
+body {
+    background-color: #f1f1f1;
+}
+
+#feed {
+    background-color: #fefefe;
+}

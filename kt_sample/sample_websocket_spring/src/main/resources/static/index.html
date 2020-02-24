@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket</title>
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/main.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-text">
+            Sample Chat
+        </span>
+    </nav>
+    <div id="main-content" class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input id="username" type="text" class="form-control" placeholder="Your name here..." />
+                        <button id="connect" class="btn btn-light" type="submit">Connect</button>
+                        <button id="disconnect" class="btn btn-light" type="submit" disabled="disabled">Disconnect</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="message-form" class="row">
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="content"></label>
+                        <textarea id="content" class="form-control" placeholder="Your message here..." rows="2" disabled="disabled"></textarea>
+                    </div>
+                    <button id="send" class="btn btn-primary" type="submit" disabled="disabled">Post</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="conversation">
+                    <div>
+                        <h2>Messages</h2>
+                    </div>
+                    <ul id="feed" class="list-unstyled">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>-->
+<!--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/app.js"></script>
+</body>
+</html>
