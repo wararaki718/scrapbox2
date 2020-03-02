@@ -1,5 +1,11 @@
 # sample ml-pipeline
 
+## install packages
+
+```shell
+poetry install
+```
+
 ## download data
 
 ```shell
