@@ -15,5 +15,5 @@ poetry install
 ## execute this application
 
 ```shell script
-poetry run python sample_factory_strategy
+poetry run python sample_factory_strategy/main.py
 ```
