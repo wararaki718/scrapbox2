@@ -14,7 +14,7 @@ def create_wordcloud(data_dir: str, image_path: str):
         tokens.extend(tokenizer(text))
     data = " ".join(tokens)
 
-    wordcloud = WordCloud(max_font_size=40).generate(data)
+    wordcloud = WordCloud(max_font_size=40, font_path='/Library/Fonts/AppleGothic.ttf').generate(data)
     wordcloud.to_file(image_path)
 
 
