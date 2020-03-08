@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "sample_lsa_lsi"
+version = "0.1.0"
+description = ""
+authors = ["wararaki <ky7.ott.w@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+scipy = "^1.4.1"
+numpy = "^1.18.1"
+pandas = "^1.0.1"
+scikit-learn = "^0.22.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
