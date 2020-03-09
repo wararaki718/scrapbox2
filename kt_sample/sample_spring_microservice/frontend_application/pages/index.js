@@ -19,9 +19,10 @@ class SamplePage extends React.Component {
     
     // send message
     fetch(
-      'http://springnet:8080/message',
+      'http://localhost:8080/message',
       {
         method: 'POST',
+        mode: 'cors',
         headers: {
           "Content-Type": "application/json; charset=utf-8"
         },
@@ -44,12 +45,12 @@ class SamplePage extends React.Component {
       <div>
         <div>
           <form>
-            <input type="text" value={this.state.message} onChange={this.handleClick} />
+            <input type="text" value={this.state.message} onChange={this.handleChange} />
           </form>
-          <button onClick={this.handleClick}>send message</button>
+          <button onClick={this.messageSend}>send message</button>
         </div>
         <div>
-          reply: {this.state.reply}
+          {this.state.reply}
         </div>
       </div>
     )
