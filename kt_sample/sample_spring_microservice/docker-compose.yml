@@ -1,0 +1,19 @@
+version: "3"
+services:
+  backend:
+    build: ./backend_server
+    image: backend-spring:1.0
+    ports: 
+      - 8080:8080
+    networks: 
+      - springnet
+  frontend:
+    build: ./frontend_application
+    image: frontend-next:1.0
+    ports:
+      - 3000:3000
+    networks:
+      - springnet
+
+networks: 
+  springnet:
