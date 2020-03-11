@@ -1,8 +1,12 @@
 # sample pytorch
 
-## install packages
+## download libtorch
 
-## compile
+```shell
+bash setup.sh
+```
+
+## build
 
 ```shell
 cmake -DCMAKE_PREFIX_PATH=/Users/wararaki/projects/scrapbox2/c_sample/pytorch_cpp/libtorch
