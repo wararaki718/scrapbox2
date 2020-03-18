@@ -1,0 +1,6 @@
+version: "3"
+services:
+  frontend:
+    build:
+      args:
+        - BUILD_ENV=custom

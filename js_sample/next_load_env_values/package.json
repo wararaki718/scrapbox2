@@ -1,0 +1,20 @@
+{
+  "name": "next_load_env_values",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build:production": "ENV_VALUE=production next build",
+    "build:custom": "ENV_VALUE=custom next build",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "9.3.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "devDependencies": {
+    "styled-components": "^5.0.1"
+  }
+}
