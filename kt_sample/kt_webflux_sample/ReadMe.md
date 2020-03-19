@@ -1,4 +1,4 @@
-# sample application
+# sample webflux application
 
 ## build
 
