@@ -1,0 +1,13 @@
+{
+    "query": {
+        "script_score": {
+            "query": {
+                "match_all": {}
+            },
+            "script": {
+                "lang": "painless",
+                "source": "doc['age'].value % 10"
+            }
+        }
+    }
+}
