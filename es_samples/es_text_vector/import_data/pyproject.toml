@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "import_data"
+version = "0.1.0"
+description = ""
+authors = ["wararaki <ky7.ott.w@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+elasticsearch = "^7.6"
+scikit-learn = "^0.22.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
