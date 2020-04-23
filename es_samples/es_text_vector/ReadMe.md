@@ -1,4 +1,4 @@
-# setup environment japanese data in elasticsearch
+# using dense_vector function in elasticsearch
 
 ## build image
 
