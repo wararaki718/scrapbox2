@@ -9,6 +9,7 @@ def main():
     trends.build_payload(keywords, cat=0, timeframe='today 5-y', geo='JP', gprop='')
     response = trends.related_queries()
 
+    # show response
     for key, value in response.items():
         print(f'key: {key}')
         for key2, value2 in value.items():
