@@ -8,7 +8,11 @@ def main():
     movielens = fetch_movielens()
 
     train = movielens['train']
+    print(type(train))
+    print(train)
     test = movielens['test']
+    print(type(test))
+    print(test)
 
     model = LightFM(learning_rate=0.05, loss='bpr')
     model.fit(train, epochs=10)
