@@ -9,10 +9,10 @@ def main():
 
     train = movielens['train']
     print(type(train))
-    print(train)
+    print(train.toarray()[:5, :])
     test = movielens['test']
     print(type(test))
-    print(test)
+    print(test.toarray()[:5, :])
 
     model = LightFM(learning_rate=0.05, loss='bpr')
     model.fit(train, epochs=10)
