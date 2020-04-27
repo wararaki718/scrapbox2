@@ -1,15 +1,16 @@
-import glob
+from glob import glob
 import logging
 
+import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.pipeline import Pipeline
 from tqdm import tqdm
 
-from news_iterator import NewsIterator
+from news_interator import NewsIterator
+from nn_classifier import NNClassifier
 from text_tokenizer import TextTokenizer
-
 
 logging.basicConfig(level='INFO')
 logger = logging.getLogger(__name__)
@@ -17,10 +18,11 @@ logger = logging.getLogger(__name__)
 
 def main():
     dir_path = 'text/*/*.txt'
-    n_news = len(glob.glob(dir_path))
+    n_news = len(glob(dir_path))
 
     logger.info('load data')
     news_iter = NewsIterator(dir_path)
+
     X = []
     y = []
     tokenizer = TextTokenizer()
@@ -30,10 +32,12 @@ def main():
             y.append(news.label)
             pbar.update(1)
     logger.info(f'loaded ({len(y)})')
-
+    
+    X = np.array(X)
+    y = np.array(y)
     pipeline = Pipeline([
         ('tfidf', TfidfVectorizer()),
-        ('rfc', RandomForestClassifier())
+        ('nn', NNClassifier())
     ])
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
@@ -41,8 +45,11 @@ def main():
     logger.info('train start:')
     pipeline.fit(X_train, y_train)
 
-    logger.info('test:')
-    logger.info(pipeline.score(X_test, y_test))
+    logger.info('test start')
+    y_preds = pipeline.predict(X_test)
+    score = accuracy_score(y_test, y_preds)
+    print(f'score: {score}')
+    print('DONE')
 
 
 if __name__ == '__main__':
