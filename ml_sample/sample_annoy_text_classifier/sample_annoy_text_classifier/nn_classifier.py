@@ -50,7 +50,7 @@ class NNClassifier(BaseEstimator):
         most_common = counter.most_common(1)
         return most_common[0][0]
 
-    def get_params(self, deep=True):
+    def get_params(self, deep: bool=True):
         return {
             'metric': self._metric,
             'n_trees': self._n_trees,

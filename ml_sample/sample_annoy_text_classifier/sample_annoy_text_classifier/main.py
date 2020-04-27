@@ -22,7 +22,6 @@ def main():
 
     logger.info('load data')
     news_iter = NewsIterator(dir_path)
-
     X = []
     y = []
     tokenizer = TextTokenizer()
