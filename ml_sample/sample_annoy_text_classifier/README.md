@@ -1,5 +1,11 @@
 # sample annoy text classifier
 
+## download sample data
+
+```shell script
+bash download.sh
+```
+
 ## install packages
 
 ```shell script
