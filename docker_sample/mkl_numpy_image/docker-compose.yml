@@ -1,0 +1,5 @@
+version: "3"
+services:
+  show_config:
+    build: .
+    image: show-numpy-config:latest
