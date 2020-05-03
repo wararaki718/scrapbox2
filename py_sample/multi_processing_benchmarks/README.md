@@ -1,5 +1,11 @@
 # benchmarks
 
+## install packages
+
+```shell script
+poetry install
+```
+
 ## run programs
 
 ```shell script
