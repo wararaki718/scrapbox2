@@ -1,4 +1,4 @@
-from logging_not_format import __version__
+from logging_practice_format import __version__
 
 
 def test_version():

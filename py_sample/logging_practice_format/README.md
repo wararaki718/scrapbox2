@@ -3,5 +3,5 @@
 ## run
 
 ```shell script
-poetry run python logging_not_format/main.py
+poetry run python logging_practice_format/main.py
 ```

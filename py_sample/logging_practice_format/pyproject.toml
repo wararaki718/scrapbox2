@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "logging_not_format"
+name = "logging_practice_format"
 version = "0.1.0"
 description = ""
 authors = ["wararaki <ky7.ott.w@gmail.com>"]
