@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "torch_ltr"
+version = "0.1.0"
+description = ""
+authors = ["wararaki <ky7.ott.w@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+torch = "^1.5"
+torchvision = "^0.6.0"
+numpy = "^1.18"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
