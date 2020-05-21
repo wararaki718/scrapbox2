@@ -13,7 +13,7 @@ def make_dataset(N_train: int,
     y_train = torch.mm(X_train, weights)
     y_valid = torch.mm(X_valid, weights)
 
-    bins = [-2, -1, 0, 1] # 5 relevances
+    bins = [-2, -1, 0, 1, 2] # 5 relevances
     y_train = torch.Tensor(
         np.digitize(y_train.clone().detach().numpy(), bins=bins)
     )
