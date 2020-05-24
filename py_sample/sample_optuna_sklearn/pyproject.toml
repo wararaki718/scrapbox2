@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "sample_optuna_sklearn"
+version = "0.1.0"
+description = ""
+authors = ["wararaki <ky7.ott.w@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+optuna = "^1.4"
+scikit-learn = "^0.23.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
