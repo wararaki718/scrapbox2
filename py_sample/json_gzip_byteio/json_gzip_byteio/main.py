@@ -17,11 +17,11 @@ def main():
         }
     ]
     s = "\n".join(map(json.dumps, data))
-    bdata = io.BytesIO()
-    with gzip.open(bdata, 'wt') as gf:
-        gf.write(s)
-    bdata.seek(0)
-    print(bdata)
+    with io.BytesIO() as bdata:
+        with gzip.open(bdata, 'wt') as gf:
+            gf.write(s)
+        bdata.seek(0)
+        print(bdata)
     print('DONE')
 
 
