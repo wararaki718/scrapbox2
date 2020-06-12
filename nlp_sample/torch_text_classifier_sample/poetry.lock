@@ -1,0 +1,233 @@
+[[package]]
+category = "dev"
+description = "Atomic file writes."
+name = "atomicwrites"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "1.4.0"
+
+[[package]]
+category = "dev"
+description = "Classes Without Boilerplate"
+name = "attrs"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "19.3.0"
+
+[[package]]
+category = "main"
+description = "Python package for providing Mozilla's CA Bundle."
+name = "certifi"
+optional = false
+python-versions = "*"
+version = "2020.4.5.2"
+
+[[package]]
+category = "main"
+description = "Universal encoding detector for Python 2 and 3"
+name = "chardet"
+optional = false
+python-versions = "*"
+version = "3.0.4"
+
+[[package]]
+category = "dev"
+description = "Cross-platform colored terminal text."
+marker = "sys_platform == \"win32\""
+name = "colorama"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+version = "0.4.3"
+
+[[package]]
+category = "main"
+description = "Clean single-source support for Python 3 and 2"
+name = "future"
+optional = false
+python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
+version = "0.18.2"
+
+[[package]]
+category = "main"
+description = "Internationalized Domain Names in Applications (IDNA)"
+name = "idna"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "2.9"
+
+[[package]]
+category = "dev"
+description = "Read metadata from Python packages"
+marker = "python_version < \"3.8\""
+name = "importlib-metadata"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
+version = "1.6.1"
+
+[package.dependencies]
+zipp = ">=0.5"
+
+[[package]]
+category = "dev"
+description = "More routines for operating on iterables, beyond itertools"
+name = "more-itertools"
+optional = false
+python-versions = ">=3.5"
+version = "8.3.0"
+
+[[package]]
+category = "main"
+description = "NumPy is the fundamental package for array computing with Python."
+name = "numpy"
+optional = false
+python-versions = ">=3.5"
+version = "1.18.5"
+
+[[package]]
+category = "dev"
+description = "plugin and hook calling mechanisms for python"
+name = "pluggy"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "0.13.1"
+
+[package.dependencies]
+[package.dependencies.importlib-metadata]
+python = "<3.8"
+version = ">=0.12"
+
+[[package]]
+category = "dev"
+description = "library with cross-python path, ini-parsing, io, code, log facilities"
+name = "py"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "1.8.1"
+
+[[package]]
+category = "dev"
+description = "pytest: simple powerful testing with Python"
+name = "pytest"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "3.10.1"
+
+[package.dependencies]
+atomicwrites = ">=1.0"
+attrs = ">=17.4.0"
+colorama = "*"
+more-itertools = ">=4.0.0"
+pluggy = ">=0.7"
+py = ">=1.5.0"
+setuptools = "*"
+six = ">=1.10.0"
+
+[[package]]
+category = "main"
+description = "Python HTTP for Humans."
+name = "requests"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+version = "2.23.0"
+
+[package.dependencies]
+certifi = ">=2017.4.17"
+chardet = ">=3.0.2,<4"
+idna = ">=2.5,<3"
+urllib3 = ">=1.21.1,<1.25.0 || >1.25.0,<1.25.1 || >1.25.1,<1.26"
+
+[[package]]
+category = "main"
+description = "SentencePiece python wrapper"
+name = "sentencepiece"
+optional = false
+python-versions = "*"
+version = "0.1.92"
+
+[[package]]
+category = "main"
+description = "Python 2 and 3 compatibility utilities"
+name = "six"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
+version = "1.15.0"
+
+[[package]]
+category = "main"
+description = "Tensors and Dynamic neural networks in Python with strong GPU acceleration"
+name = "torch"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.6.0"
+version = "1.5.0"
+
+[package.dependencies]
+future = "*"
+numpy = "*"
+
+[[package]]
+category = "main"
+description = "Text utilities and datasets for PyTorch"
+name = "torchtext"
+optional = false
+python-versions = "*"
+version = "0.6.0"
+
+[package.dependencies]
+numpy = "*"
+requests = "*"
+sentencepiece = "*"
+six = "*"
+torch = "*"
+tqdm = "*"
+
+[[package]]
+category = "main"
+description = "Fast, Extensible Progress Meter"
+name = "tqdm"
+optional = false
+python-versions = ">=2.6, !=3.0.*, !=3.1.*"
+version = "4.46.1"
+
+[[package]]
+category = "main"
+description = "HTTP library with thread-safe connection pooling, file post, and more."
+name = "urllib3"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4"
+version = "1.25.9"
+
+[[package]]
+category = "dev"
+description = "Backport of pathlib-compatible object wrapper for zip files"
+marker = "python_version < \"3.8\""
+name = "zipp"
+optional = false
+python-versions = ">=3.6"
+version = "3.1.0"
+
+[metadata]
+content-hash = "a45683bc5621a7c9cad718a01be2eee0621c307d62e7c9a38798032c1de1483d"
+python-versions = "^3.7"
+
+[metadata.hashes]
+atomicwrites = ["6d1784dea7c0c8d4a5172b6c620f40b6e4cbfdf96d783691f2e1302a7b88e197", "ae70396ad1a434f9c7046fd2dd196fc04b12f9e91ffb859164193be8b6168a7a"]
+attrs = ["08a96c641c3a74e44eb59afb61a24f2cb9f4d7188748e76ba4bb5edfa3cb7d1c", "f7b7ce16570fe9965acd6d30101a28f62fb4a7f9e926b3bbc9b61f8b04247e72"]
+certifi = ["5ad7e9a056d25ffa5082862e36f119f7f7cec6457fa07ee2f8c339814b80c9b1", "9cd41137dc19af6a5e03b630eefe7d1f458d964d406342dd3edf625839b944cc"]
+chardet = ["84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae", "fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"]
+colorama = ["7d73d2a99753107a36ac6b455ee49046802e59d9d076ef8e47b61499fa29afff", "e96da0d330793e2cb9485e9ddfd918d456036c7149416295932478192f4436a1"]
+future = ["b1bead90b70cf6ec3f0710ae53a525360fa360d306a86583adc6bf83a4db537d"]
+idna = ["7588d1c14ae4c77d74036e8c22ff447b26d0fde8f007354fd48a7814db15b7cb", "a068a21ceac8a4d63dbfd964670474107f541babbd2250d61922f029858365fa"]
+importlib-metadata = ["0505dd08068cfec00f53a74a0ad927676d7757da81b7436a6eefe4c7cf75c545", "15ec6c0fd909e893e3a08b3a7c76ecb149122fb14b7efe1199ddd4c7c57ea958"]
+more-itertools = ["558bb897a2232f5e4f8e2399089e35aecb746e1f9191b6584a151647e89267be", "7818f596b1e87be009031c7653d01acc46ed422e6656b394b0f765ce66ed4982"]
+numpy = ["0172304e7d8d40e9e49553901903dc5f5a49a703363ed756796f5808a06fc233", "34e96e9dae65c4839bd80012023aadd6ee2ccb73ce7fdf3074c62f301e63120b", "3676abe3d621fc467c4c1469ee11e395c82b2d6b5463a9454e37fe9da07cd0d7", "3dd6823d3e04b5f223e3e265b4a1eae15f104f4366edd409e5a5e413a98f911f", "4064f53d4cce69e9ac613256dc2162e56f20a4e2d2086b1956dd2fcf77b7fac5", "4674f7d27a6c1c52a4d1aa5f0881f1eff840d2206989bae6acb1c7668c02ebfb", "7d42ab8cedd175b5ebcb39b5208b25ba104842489ed59fbb29356f671ac93583", "965df25449305092b23d5145b9bdaeb0149b6e41a77a7d728b1644b3c99277c1", "9c9d6531bc1886454f44aa8f809268bc481295cf9740827254f53c30104f074a", "a78e438db8ec26d5d9d0e584b27ef25c7afa5a182d1bf4d05e313d2d6d515271", "a7acefddf994af1aeba05bbbafe4ba983a187079f125146dc5859e6d817df824", "a87f59508c2b7ceb8631c20630118cc546f1f815e034193dc72390db038a5cb3", "ac792b385d81151bae2a5a8adb2b88261ceb4976dbfaaad9ce3a200e036753dc", "b03b2c0badeb606d1232e5f78852c102c0a7989d3a534b3129e7856a52f3d161", "b39321f1a74d1f9183bf1638a745b4fd6fe80efbb1f6b32b932a588b4bc7695f", "cae14a01a159b1ed91a324722d746523ec757357260c6804d11d6147a9e53e3f", "cd49930af1d1e49a812d987c2620ee63965b619257bd76eaaa95870ca08837cf", "e15b382603c58f24265c9c931c9a45eebf44fe2e6b4eaedbb0d025ab3255228b", "e91d31b34fc7c2c8f756b4e902f901f856ae53a93399368d9a0dc7be17ed2ca0", "ef627986941b5edd1ed74ba89ca43196ed197f1a206a3f18cc9faf2fb84fd675", "f718a7949d1c4f622ff548c572e0c03440b49b9531ff00e4ed5738b459f011e8"]
+pluggy = ["15b2acde666561e1298d71b523007ed7364de07029219b604cf808bfa1c765b0", "966c145cd83c96502c3c3868f50408687b38434af77734af1e9ca461a4081d2d"]
+py = ["5e27081401262157467ad6e7f851b7aa402c5852dbcb3dae06768434de5752aa", "c20fdd83a5dbc0af9efd622bee9a5564e278f6380fffcacc43ba6f43db2813b0"]
+pytest = ["3f193df1cfe1d1609d4c583838bea3d532b18d6160fd3f55c9447fdca30848ec", "e246cf173c01169b9617fc07264b7b1316e78d7a650055235d6d897bc80d9660"]
+requests = ["43999036bfa82904b6af1d99e4882b560e5e2c68e5c4b0aa03b655f3d7d73fee", "b3f43d496c6daba4493e7c431722aeb7dbc6288f52a6e04e7b6023b0247817e6"]
+sentencepiece = ["040c91321e3ad1b468283a2518bdcddcd7eaed61072dbe65357f03551b2a33c4", "0ae4ff32626786d8c46823bdffce1098dcd5c8fdf0875000b9b95974301d8162", "21c23ebe3c7299bd3d2e09f68a669b28d3a2f652f67798176840b5a31f952667", "366cd4e01e723075786f0383d6b153965c09567ced96618dc2a3be2ca7353d5a", "3d6760dad64d228bbd655aee5063a379e05d348efb3914334110e813fb0db941", "3d8c36c21d4ed395f24b98e3289128448e23288b8f1a9242d5f33df13d16fd90", "5daf059b31ef82b52698f86891ed8376550d36a5b87a4a3590a94a255346ee08", "7755b14655e882fffeb4b76571bc6074d048727fb3b081b7605381edadcf9442", "7fd16c761339f593596b63e50810a2d2eff964d428ab79a49674c7371c055561", "8e314d06ff358881df0ee784f653d222c4ea551eb7fcac00c80b082d63810602", "9939d818053e0929edbb144f14487e2cd007a32445658aa0376673aefc87d6d3", "997bc09c70e9d6f8b880bffaf83900cf1dabf65afd0b4ea5461b4c813caaec40", "b36a8dfd4de5c65ed0712839985efa4ecd21b645d870db5c18823b29f6c9117a", "c46a687723433d2e933ecbe201d818c3b7a18d0e0043794ed750c3472391b0c7", "d15c0550b9e034ed7c43357abfbbe05e8c05e63116162ca9e2c4557b6dca2653", "d1a2d2d83e1e9b38f873fadef090c0d6c020f522bf7f256b92ffe5464e0d8ef9", "da5e5c29b4754da8cda52e72a1bfcfddd7d60bfe73bdf8e286650eacc205ac62", "de808a218b197e6105bacafe0008a1c76d5c5d9be3d10dc4c6d2974653f01034", "e6ab8b0b67b345581aa0b49c0fc58a8c7515eb4a27b9cc24d3cbfe2affbdd7e8", "e6e32647417084623b4d17ec2e16de4be112198be9536d760ade05fb53749a3b", "ef587b573700e77e6bd8e4d702e71129ec71171c712cd15bac351d5726d611fa", "f7a695e6bfc1a78dddacb0cbbbaba02a12da26ec1570cb91a9744fd46467a9fc", "fa9cb02572bc28dad2c53761678d314e194bd8d3a87a3eb545427915b5034c57", "fbb9060839c95799029f4ddf2154aa0fd2e73836e589b1c8ea02ece236252599"]
+six = ["30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259", "8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"]
+torch = ["3cc72d36eaeda96488e3a29373f739b887338952417b3e1620871063bf5d14d2", "402951484443bb49b5bc2129414ac6c644c07b8378e79922cf3645fd08cbfdc9", "6fcfe5deaf0788bbe8639869d3c752ff5fe1bdedce11c7ed2d44379b1fbe6d6c", "7f3d6af2d7e2576b9640aa684f0c18a773efffe8b37f9056272287345c1dcba5", "865d4bec21542647e0822e8b753e05d67eee874974a3937273f710edd99a7516", "931b79aed9aba50bf314214be6efaaf7972ea9539a3d63f82622bc5860a1fd81", "cb4412c6b00117ab5e014d07dac45b87f1e918e31fbb849e7e39f1f9140fff59", "dfaac4c5d27ac80705956743c34fb1ab5fb37e1646a6c8e45f05f7e739f6ea7c", "ecdc2ea4011e3ec04937b6b9e803ab671c3ac04e81b1df20354e01453e508b2f"]
+torchtext = ["100c6633d76c33eca10cf4a97ba20f95aff02efaa870032ef15b7a6a9f2fd77d", "7522fbb58e847d698f6c6a3253d4c9482e193608fa0ca647c5cfc97d630518c4"]
+tqdm = ["07c06493f1403c1380b630ae3dcbe5ae62abcf369a93bbc052502279f189ab8c", "cd140979c2bebd2311dfb14781d8f19bd5a9debb92dcab9f6ef899c987fcf71f"]
+urllib3 = ["3018294ebefce6572a474f0604c2021e33b3fd8006ecd11d62107a5d2a963527", "88206b0eb87e6d677d424843ac5209e3fb9d0190d0ee169599165ec25e9d9115"]
+zipp = ["aa36550ff0c0b7ef7fa639055d797116ee891440eac1a56f378e2d3179e0320b", "c599e4d75c98f6798c509911d08a22e6c021d074469042177c8c86fb92eefd96"]
